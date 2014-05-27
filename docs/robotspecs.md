@@ -4,7 +4,7 @@ robot specs
 cb.pkbasic specially addresses variables like so:
 
 Var | Value
-----+----------
+----|----------
 #A  | last scan result [0-1] [wall/robot]
 #B  | last scan distance
 #C  | last movement result [0-1] [fail/success]

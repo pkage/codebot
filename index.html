@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>codebot by quadnix</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/quadnix/codebot">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/quadnix/codebot/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/quadnix/codebot/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>codebot</h1>
+          <p>pkbasic-driven robot emulator</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/quadnix">quadnix</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="codebot" class="anchor" href="#codebot"><span class="octicon octicon-link"></span></a>codebot</h1>
+
+<p>a pkbasic-driven robot emulator.
+written in a couple of days on and off.
+similar in concept to robocode.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>requirements</h2>
+
+<ul>
+<li>ncurses</li>
+<li>
+<a href="http://sfml-dev.org">sfml</a> (system/window)</li>
+</ul><p>tested under osx 10.9.2 with g++ &amp; clang++</p>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>getting started</h2>
+
+<p>run the build script in /source, then (optionally) copy/move the binary onto your $PATH
+just run the binary, you'll be guided through everything</p>
+
+<h2>
+<a name="keybindings" class="anchor" href="#keybindings"><span class="octicon octicon-link"></span></a>keybindings</h2>
+
+<p>everything that isn't marked in the program</p>
+
+<table>
+<thead><tr>
+<th>key</th>
+<th>action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>p</code></td>
+<td>pause the simulation (in a match) &amp; bring up the menu</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>quit the simulation (in a match)</td>
+</tr>
+</tbody>
+</table><h2>
+<a name="robot-specs" class="anchor" href="#robot-specs"><span class="octicon octicon-link"></span></a>robot specs</h2>
+
+<p>cb.pkbasic specially addresses variables like so:</p>
+
+<table>
+<thead><tr>
+<th>Var</th>
+<th>Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>#A</td>
+<td>last scan result [0-1] [wall/robot]</td>
+</tr>
+<tr>
+<td>#B</td>
+<td>last scan distance</td>
+</tr>
+<tr>
+<td>#C</td>
+<td>last movement result [0-1] [fail/success]</td>
+</tr>
+<tr>
+<td>#E</td>
+<td>Robot's energy [readonly*]</td>
+</tr>
+<tr>
+<td>#H</td>
+<td>Robot's health [readonly*]</td>
+</tr>
+<tr>
+<td>#X</td>
+<td>Robot's X position on map [readonly*]</td>
+</tr>
+<tr>
+<td>#Y</td>
+<td>Robot's Y position on map [readonly*]</td>
+</tr>
+</tbody>
+</table><p>cb.pkbasic also has special keywords:</p>
+
+<table>
+<thead><tr>
+<th>Keyword</th>
+<th>Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>move</code></td>
+<td>moves in a direction specified **</td>
+</tr>
+<tr>
+<td><code>scan</code></td>
+<td>scans in a direction specified **</td>
+</tr>
+<tr>
+<td><code>fire</code></td>
+<td>fires in a direction specified **</td>
+</tr>
+</tbody>
+</table><p>notes</p>
+
+<p><em>* readonly values are updated every tick, so any changes you make will by overwritten by the controller's values for that bot</em></p>
+
+<p><em>** valid directions are up/down/left/right</em></p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
